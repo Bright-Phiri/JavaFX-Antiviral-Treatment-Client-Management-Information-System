@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="600.0" prefWidth="1001.0" style="-fx-background-color: #F3F5F7;" stylesheets="@../css/dashBoard.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.doctorsettingsController">
+   <top>
+      <HBox prefWidth="967.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="45.0" prefWidth="710.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Text fill="#66ddff" strokeType="OUTSIDE" strokeWidth="0.0" text="Settings">
+                     <VBox.margin>
+                        <Insets left="20.0" top="25.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane layoutX="257.0" layoutY="34.0" prefHeight="521.0" prefWidth="967.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-color: #c8c8c8; -fx-border-radius: 15; -fx-border-width: 0.7;" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="34.0">
+               <children>
+                  <AnchorPane fx:id="pane2" layoutX="20.0" layoutY="-14.0" prefHeight="56.0" prefWidth="927.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+                  <HBox layoutX="0.699999988079071" layoutY="0.699999988079071" prefWidth="927.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <VBox prefHeight="494.0" prefWidth="463.5">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="General Settings">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="60.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <JFXTextField fx:id="firstName" labelFloat="true" layoutX="30.0" layoutY="109.0" maxWidth="377.0" prefHeight="30.0" prefWidth="228.0" promptText="First Name">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="20.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                              <JFXTextField fx:id="lastName" labelFloat="true" layoutX="10.0" layoutY="440.0" maxWidth="377.0" prefHeight="30.0" prefWidth="228.0" promptText="Last Name">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="20.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                              <JFXTextField fx:id="username" labelFloat="true" maxWidth="377.0" prefHeight="30.0" prefWidth="228.0" promptText="Username">
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="20.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="email" labelFloat="true" layoutX="30.0" layoutY="109.0" maxWidth="377.0" prefHeight="30.0" prefWidth="228.0" promptText="Email Address">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="20.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                              <JFXTextField fx:id="phone" labelFloat="true" layoutX="30.0" layoutY="159.0" maxWidth="377.0" prefHeight="30.0" prefWidth="228.0" promptText="Phone">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="20.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                              <HBox>
+                                 <children>
+                                    <JFXTextField fx:id="imageUrl" editable="false" labelFloat="true" maxWidth="377.0" prefHeight="30.0" prefWidth="350.0" promptText="Image">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <FontAwesomeIconView glyphName="PICTURE_ALT" onMouseClicked="#browseImage" size="25">
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </FontAwesomeIconView>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <JFXPasswordField fx:id="password" labelFloat="true" maxWidth="376.0" prefHeight="30.0" prefWidth="228.0" promptText="Enter password to proceed">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="20.0" />
+                                 </VBox.margin>
+                              </JFXPasswordField>
+                              <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" VBox.vgrow="NEVER">
+                                 <children>
+                                    <JFXButton onAction="#savePersonalInfo" prefHeight="25.0" prefWidth="128.0" text="Save" HBox.hgrow="NEVER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="20.0" top="20.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                    <JFXButton layoutX="30.0" layoutY="30.0" onAction="#cancelSavingOpt" prefHeight="25.0" prefWidth="128.0" text="Cancel" HBox.hgrow="NEVER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="20.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="10.0" prefHeight="494.0" prefWidth="463.5">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Change Password">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="60.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <JFXPasswordField fx:id="oldPassword" labelFloat="true" maxWidth="376.0" prefHeight="30.0" prefWidth="228.0" promptText="Old Password">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="20.0" />
+                                 </VBox.margin>
+                              </JFXPasswordField>
+                              <JFXPasswordField fx:id="newPassword1" labelFloat="true" layoutX="30.0" layoutY="109.0" maxWidth="376.0" prefHeight="30.0" prefWidth="228.0" promptText="New password">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="20.0" />
+                                 </VBox.margin>
+                              </JFXPasswordField>
+                              <JFXPasswordField fx:id="newPassword2" labelFloat="true" layoutX="10.0" layoutY="139.0" maxWidth="376.0" prefHeight="30.0" prefWidth="228.0" promptText="Re-enter new password">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="20.0" />
+                                 </VBox.margin>
+                              </JFXPasswordField>
+                              <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" VBox.vgrow="NEVER">
+                                 <children>
+                                    <JFXButton onAction="#savePassword" prefHeight="25.0" prefWidth="128.0" text="Save" HBox.hgrow="NEVER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="20.0" top="20.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                    <JFXButton layoutX="30.0" layoutY="30.0" onAction="#canceSavePassword" prefHeight="25.0" prefWidth="128.0" text="Cancel" HBox.hgrow="NEVER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="20.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="rootPane" prefHeight="651.0" prefWidth="1175.0" style="-fx-background-color: #F3F5F7;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.mainPanelController">
+   <top>
+      <HBox alignment="CENTER_LEFT" prefHeight="51.0" prefWidth="1141.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="51.0" prefWidth="172.0">
+               <children>
+                  <ImageView fitHeight="53.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/aids_ribbon_96px.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="18.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ART">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="51.0" prefWidth="927.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <FontAwesomeIconView glyphName="CALENDAR" size="20">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <VBox prefHeight="51.0" prefWidth="202.0">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <children>
+                        <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Text fx:id="day" fill="#66ddff" strokeType="OUTSIDE" strokeWidth="0.0" text="DAY 2,">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="week" fill="#66ddff" layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WEEK 6">
+                                 <HBox.margin>
+                                    <Insets left="4.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Today,">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="date" layoutX="10.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="19th September, 2019">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="4.0" />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <MaterialDesignIconView glyphName="UNFOLD_MORE" rotate="90.0" size="40">
+                     <HBox.margin>
+                        <Insets left="6.0" />
+                     </HBox.margin>
+                  </MaterialDesignIconView>
+               </children></HBox>
+            <FontAwesomeIconView fx:id="logout" glyphName="SIGN_OUT" onMouseClicked="#signOut" size="26">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox fx:id="pane" prefHeight="600.0" prefWidth="149.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10;" stylesheets="@../css/main.css" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="25.0" left="25.0" top="25.0" />
+         </BorderPane.margin>
+         <children>
+            <VBox>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <children>
+                  <HBox>
+                     <children>
+                        <Circle fx:id="profilePhoto" fill="DODGERBLUE" radius="38.0" stroke="#eeeeee" strokeType="INSIDE">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Circle>
+                        <Text fill="#fd5b73" onMouseClicked="#editProfile" strokeType="OUTSIDE" strokeWidth="0.0" text="EDIT">
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <Text fx:id="username" strokeType="OUTSIDE" strokeWidth="0.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Text>
+               </children>
+            </VBox>
+            <Separator prefWidth="200.0">
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </Separator>
+            <JFXButton fx:id="homeBtn" graphicTextGap="10.0" onAction="#loadHomePanel" prefHeight="56.0" prefWidth="149.0" ripplerFill="WHITE" text="Home">
+               <graphic>
+                  <MaterialDesignIconView fx:id="homeIco" glyphName="HOME" size="17" />
+               </graphic>
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <padding>
+                  <Insets right="60.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton fx:id="addUserBtn" graphicTextGap="6.0" layoutX="10.0" layoutY="142.0" onAction="#loadAddUserPanel" prefHeight="56.0" prefWidth="149.0" ripplerFill="WHITE" text="Add User">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <padding>
+                  <Insets right="35.0" />
+               </padding>
+               <graphic>
+                  <FontAwesomeIconView fx:id="useIco" glyphName="USER_PLUS" size="17" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="userListBtn" graphicTextGap="6.0" layoutX="10.0" layoutY="198.0" onAction="#loadUserListPanel" prefHeight="56.0" prefWidth="149.0" ripplerFill="WHITE" text="User list">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <padding>
+                  <Insets right="50.0" />
+               </padding>
+               <graphic>
+                  <FontAwesomeIconView fx:id="listIco" glyphName="LIST" size="17" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="mailBtn" graphicTextGap="10.0" layoutX="10.0" layoutY="142.0" onAction="#loadMailPanel" prefHeight="56.0" prefWidth="149.0" ripplerFill="WHITE" text="Mail">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <padding>
+                  <Insets right="70.0" />
+               </padding>
+               <graphic>
+                  <FontAwesomeIconView fx:id="mailIco" glyphName="ENVELOPE" size="17" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="statisticsBtn" graphicTextGap="10.0" layoutX="10.0" layoutY="198.0" onAction="#loadStatisticsPanel" prefHeight="56.0" prefWidth="149.0" ripplerFill="WHITE" text="Statistics">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <padding>
+                  <Insets right="35.0" />
+               </padding>
+               <graphic>
+                  <FontAwesomeIconView fx:id="statisticsIco" glyphName="LINE_CHART" size="17" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="settingsBtn" graphicTextGap="10.0" layoutX="10.0" layoutY="254.0" onAction="#loadSettingsPanel" prefHeight="56.0" prefWidth="149.0" ripplerFill="WHITE" text="Settings">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <padding>
+                  <Insets right="45.0" />
+               </padding>
+               <graphic>
+                  <FontAwesomeIconView fx:id="settingsIco" glyphName="COG" size="17" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </VBox>
+   </left>
+</BorderPane>

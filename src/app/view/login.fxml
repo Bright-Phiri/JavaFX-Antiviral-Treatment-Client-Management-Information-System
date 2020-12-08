@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+
+<BorderPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="904.0" style="-fx-border-color: black; -fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.loginController">
+   <right>
+      <StackPane prefHeight="540.0" prefWidth="516.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="545.0" fitWidth="516.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/IMG_0090.PNG" />
+               </image>
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+            </ImageView>
+            <BorderPane prefHeight="549.0" prefWidth="200.0">
+               <center>
+                  <AnchorPane prefHeight="251.0" prefWidth="477.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets bottom="160.0" left="25.0" right="25.0" top="80.0" />
+                     </BorderPane.margin>
+                     <children>
+                        <ImageView fx:id="imageView" fitHeight="252.0" fitWidth="467.0" layoutX="-1.0" pickOnBounds="true" />
+                     </children>
+                  </AnchorPane>
+               </center>
+               <top>
+                  <HBox prefHeight="44.0" prefWidth="516.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane prefHeight="40.0" prefWidth="39.0" style="-fx-background-color: white; -fx-background-radius: 2000;">
+                           <HBox.margin>
+                              <Insets left="460.0" top="4.0" />
+                           </HBox.margin>
+                           <children>
+                              <FontAwesomeIconView glyphName="CLOSE" layoutX="10.0" layoutY="27.0" onMouseClicked="#closeApp" size="25" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+               </top>
+               <StackPane.margin>
+                  <Insets top="10.0" />
+               </StackPane.margin>
+            </BorderPane>
+         </children>
+         <BorderPane.margin>
+            <Insets top="5.0" />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="8.0" />
+         </padding>
+      </StackPane>
+   </right>
+</BorderPane>

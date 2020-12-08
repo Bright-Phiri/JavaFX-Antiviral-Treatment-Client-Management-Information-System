@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="386.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.loginFormController">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="83.0" prefWidth="386.0">
+         <children>
+            <ImageView fitHeight="44.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/aids_ribbon_96px.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="40.0" />
+               </HBox.margin>
+            </ImageView>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ART">
+               <font>
+                  <Font size="31.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="-7.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER">
+         <VBox.margin>
+            <Insets top="15.0" />
+         </VBox.margin>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Login to your account.">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="32.0" prefWidth="386.0">
+         <children>
+            <JFXTextField fx:id="username" focusColor="#0a0a0a" labelFloat="true" prefHeight="30.0" prefWidth="286.0" promptText="Username">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <FontAwesomeIconView fill="#b5bac6" glyphName="USER" size="20">
+               <HBox.margin>
+                  <Insets left="-20.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+         </children>
+         <VBox.margin>
+            <Insets top="25.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="135.0" prefHeight="32.0" prefWidth="386.0">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+         <children>
+            <JFXPasswordField fx:id="password" focusColor="#030303" labelFloat="true" onKeyPressed="#signIn" prefHeight="25.0" prefWidth="286.0" promptText="Password">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXPasswordField>
+            <OctIconView fill="#b5bac6" glyphName="LOCK" size="20">
+               <HBox.margin>
+                  <Insets left="-20.0" />
+               </HBox.margin>
+            </OctIconView>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="57.0" prefWidth="386.0">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+         <children>
+            <JFXButton onAction="#login" prefHeight="42.0" prefWidth="286.0" style="-fx-background-color: #fd5b73; -fx-text-fill: white;" text="Login">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="227.0">
+         <children>
+            <Text fill="#0d0d0d" strokeType="OUTSIDE" strokeWidth="0.0" text="Create an account?">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Text>
+            <Hyperlink onMouseClicked="#loadCreateAccountPanel" text="Sign up" textFill="#fd5b73">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Hyperlink>
+         </children>
+      </HBox>
+   </children>
+</VBox>

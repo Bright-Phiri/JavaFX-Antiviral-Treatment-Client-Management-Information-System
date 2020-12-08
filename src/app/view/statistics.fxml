@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="600.0" prefWidth="1001.0" style="-fx-background-color: #F3F5F7;" stylesheets="@../css/dashBoard.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.statisticsController">
+   <top>
+      <HBox prefWidth="967.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="45.0" prefWidth="710.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Text fill="#66ddff" strokeType="OUTSIDE" strokeWidth="0.0" text="Statistics">
+                     <VBox.margin>
+                        <Insets left="20.0" top="25.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane layoutX="257.0" layoutY="34.0" prefHeight="521.0" prefWidth="967.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-color: #c8c8c8; -fx-border-radius: 15; -fx-border-width: 0.7;" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="34.0">
+               <children>
+                  <AnchorPane fx:id="pane1" layoutX="20.0" layoutY="-14.0" prefHeight="56.0" prefWidth="927.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+                  <HBox layoutX="0.699999988079071" layoutY="0.699999988079071" prefWidth="927.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <BorderPane prefHeight="499.0" prefWidth="1005.0">
+                           <bottom>
+                              <HBox prefHeight="55.0" prefWidth="960.0" spacing="10.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <JFXComboBox fx:id="exportPdf" onAction="#exportToPdf" prefHeight="25.0" prefWidth="231.0" promptText="Export to PDF" style="-fx-font-size: 13;">
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </JFXComboBox>
+                                    <JFXComboBox fx:id="exportWord" layoutX="20.0" layoutY="20.0" onAction="#exportToExcel" prefHeight="25.0" prefWidth="231.0" promptText="Export to Excel" style="-fx-font-size: 13;">
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </JFXComboBox>
+                                 </children>
+                              </HBox>
+                           </bottom>
+                           <left>
+                              <BarChart fx:id="barchart" prefHeight="463.0" prefWidth="535.0" stylesheets="@../css/chart.css" title="Users Statistics" BorderPane.alignment="CENTER">
+                                 <xAxis>
+                                    <CategoryAxis animated="false" side="RIGHT" />
+                                 </xAxis>
+                                 <yAxis>
+                                    <NumberAxis side="LEFT" />
+                                 </yAxis>
+                                 <BorderPane.margin>
+                                    <Insets top="15.0" />
+                                 </BorderPane.margin>
+                              </BarChart>
+                           </left>
+                           <center>
+                              <PieChart fx:id="pieChart" prefHeight="463.0" prefWidth="377.0" title="Users Statistics" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets bottom="20.0" top="15.0" />
+                                 </BorderPane.margin>
+                              </PieChart>
+                           </center>
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                        </BorderPane>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

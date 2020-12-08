@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="600.0" prefWidth="1001.0" style="-fx-background-color: #F3F5F7;" stylesheets="@../css/dashBoard.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.addViralSignsController">
+   <top>
+      <HBox prefWidth="967.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="45.0" prefWidth="710.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Text fill="#66ddff" strokeType="OUTSIDE" strokeWidth="0.0" text="Add viral signs">
+                     <VBox.margin>
+                        <Insets left="20.0" top="25.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane layoutX="257.0" layoutY="34.0" prefHeight="521.0" prefWidth="967.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-color: #c8c8c8; -fx-border-radius: 15; -fx-border-width: 0.7;" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="34.0">
+               <children>
+                  <AnchorPane fx:id="pane2" layoutX="20.0" layoutY="-14.0" prefHeight="56.0" prefWidth="927.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+                  <VBox layoutX="271.0" layoutY="198.0" prefHeight="496.0" prefWidth="961.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <GridPane hgap="40.0" vgap="20.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <VBox.margin>
+                              <Insets left="30.0" right="30.0" top="70.0" />
+                           </VBox.margin>
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.rowIndex="6">
+                                 <GridPane.margin>
+                                    <Insets top="50.0" />
+                                 </GridPane.margin>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.rowIndex="3">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Body rash">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Text>
+                                    <JFXRadioButton fx:id="rach1" text="Yes">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="rashG" />
+                                       </toggleGroup>
+                                    </JFXRadioButton>
+                                    <JFXRadioButton fx:id="rach0" layoutX="94.0" layoutY="10.0" text="No" toggleGroup="$rashG">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </JFXRadioButton>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="60.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sore throat">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Text>
+                                    <JFXRadioButton fx:id="throat1" text="Yes">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="throatG" />
+                                       </toggleGroup>
+                                    </JFXRadioButton>
+                                    <JFXRadioButton fx:id="throat0" layoutX="94.0" layoutY="10.0" text="No" toggleGroup="$throatG">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </JFXRadioButton>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="480.0" layoutY="60.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Swollen grands">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Text>
+                                    <JFXRadioButton fx:id="grands1" text="Yes">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="grandG" />
+                                       </toggleGroup>
+                                    </JFXRadioButton>
+                                    <JFXRadioButton fx:id="grands0" layoutX="94.0" layoutY="10.0" text="No" toggleGroup="$grandG">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </JFXRadioButton>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="headache">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Text>
+                                    <JFXRadioButton fx:id="headache1" text="Yes">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="headG" />
+                                       </toggleGroup>
+                                    </JFXRadioButton>
+                                    <JFXRadioButton fx:id="headache0" layoutX="94.0" layoutY="10.0" text="No" toggleGroup="$headG">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </JFXRadioButton>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="480.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Upset stomach">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Text>
+                                    <JFXRadioButton fx:id="stomach1" text="Yes">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="stoG" />
+                                       </toggleGroup>
+                                    </JFXRadioButton>
+                                    <JFXRadioButton fx:id="stomach0" layoutX="94.0" layoutY="10.0" text="No" toggleGroup="$stoG">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </JFXRadioButton>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="160.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Muscle pain">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Text>
+                                    <JFXRadioButton fx:id="pain1" text="Yes">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="painG" />
+                                       </toggleGroup>
+                                    </JFXRadioButton>
+                                    <JFXRadioButton fx:id="pain0" layoutX="94.0" layoutY="10.0" text="No" toggleGroup="$painG">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </JFXRadioButton>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="60.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.rowIndex="2">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Joint aches">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Text>
+                                    <JFXRadioButton fx:id="aches1" text="Yes">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="achesG" />
+                                       </toggleGroup>
+                                    </JFXRadioButton>
+                                    <JFXRadioButton fx:id="aches0" layoutX="94.0" layoutY="10.0" text="No" toggleGroup="$achesG">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </JFXRadioButton>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="210.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Chronical diarrhoea">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Text>
+                                    <JFXRadioButton fx:id="diarrhoea1" text="Yes">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="diarrG" />
+                                       </toggleGroup>
+                                    </JFXRadioButton>
+                                    <JFXRadioButton fx:id="diarrhoea0" layoutX="94.0" layoutY="10.0" text="No" toggleGroup="$diarrG">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </JFXRadioButton>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="60.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                 <children>
+                                    <JFXButton onAction="#cancelSaveFunction" prefHeight="30.0" prefWidth="172.0" text="Cancel" HBox.hgrow="NEVER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton onAction="#saveViralLoad" prefHeight="30.0" prefWidth="172.0" text="Save" HBox.hgrow="NEVER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                              <JFXTextField fx:id="height" focusColor="#ff9978" labelFloat="true" promptText="height" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="weightLoss" focusColor="#ff9978" labelFloat="true" promptText="Weight loss" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="viralLoad" focusColor="#ff9978" labelFloat="true" promptText="Viral load" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

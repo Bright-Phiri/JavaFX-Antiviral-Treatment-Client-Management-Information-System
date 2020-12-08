@@ -1,0 +1,113 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 19, 2019, 6:17:37 PM
+    Author     : Bright
+*/
+
+.table-row-cell:empty {
+    -fx-background-color: transparent;
+    -fx-base: transparent;
+    -fx-control-inner-background: transparent;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 0;
+}
+  
+.table-row-cell:empty .table-cell {
+    -fx-border-width: 0px;
+}
+
+.table-cell {     
+    -fx-padding: 0.5em 0.5em 0.1em 0.3em;
+    -fx-border-color: #e8ebec #e8ebec transparent transparent;  
+    -fx-text-fill: #212121;
+    -fx-alignment: CENTER_LEFT;
+    -fx-border-insets: 0;
+}
+.table-view {
+    -fx-table-header-border-color: #959595;
+    -fx-control-inner-background: white;
+    -fx-background-color: white;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+    -fx-border-insets: 0;
+    -fx-background-insets: 0;
+}
+.table-view:focused {
+    -fx-background-color: -fx-box-border,-fx-box-border, white;
+}
+.table-row-cell {    
+    -fx-background-color: white;
+}
+.table-row-cell:odd {
+    -fx-background-color: white;
+    -fx-background-insets: 0, 0 0 1 0;
+}
+.table-view:focused .table-row-cell:focused,.table-view:focused .table-row-cell:focused:odd {
+    -fx-background-color: -fx-box-border, white;
+    -fx-background-insets: 0, 1, 2;
+}
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: -fx-box-border, rgb(205,205,205);
+}
+.table-view:focused .table-row-cell:filled:selected, .table-view:row-selection .table-row-cell:filled:hover:selected {    
+    -fx-background-color: #f4f3f3;
+    -fx-background-insets: 0,1 1 1 1 0;
+}
+.table-view:focused .table-row-cell:filled:focused:selected:hover {    
+    -fx-background-color: -fx-box-border, rgb(205,205,205);
+    -fx-background-insets: 0,1 1 1 1 0;
+}
+.table-row-cell:filled:selected:focused, .table-row-cell:filled:selected {
+    -fx-background-color: #f5f5f5;
+}
+.table-view:row-selection .table-row-cell:filled:hover { 
+    -fx-background-color: #f5f5f5;
+}
+.table-view:row-selection .table-row-cell:filled:focused:hover { 
+    -fx-background-color: #f4f3f3;
+}
+.table-view:focused .table-row-cell:filled:focused:hover {
+    -fx-background-color: -fx-box-border,rgb(231,231,231);
+}
+.table-view .column-header-background {
+    -fx-background-color: white;
+}
+ 
+.table-view .column-header .label{
+    -fx-text-fill: #2b579a;
+    -fx-alignment: CENTER_LEFT;
+}
+
+ 
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: white;    
+    -fx-size: 35;
+    -fx-border-color: -fx-box-border;
+    -fx-border-insets: -1 0 0 -1;
+    -fx-padding: 0 5 0 0;
+}
+.table-view .show-hide-columns-button {
+    -fx-background-color: white;
+    -fx-border-color: -fx-box-border;
+    -fx-border-insets: -1 -1 0 0;
+}
+.table-view .column-drag-header {    
+    -fx-background-color: rgb(45,137,239);
+    -fx-opacity: 0.6;
+}
+.table-view .column-resize-line {  
+    -fx-background-color: rgb(45,137,239);
+}
+.table-view .column-overlay {
+    -fx-background-color: darkgray;
+    -fx-opacity: 0.2;
+}
+.table-view .arrow {
+    -fx-padding: 0.2em;
+    -fx-shape: "M4,17v-2.889l4.124-3.86l4.125,3.86V17l-4.125-3.375L4,17z";
+}

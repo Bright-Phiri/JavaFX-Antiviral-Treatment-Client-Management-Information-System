@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import eu.hansolo.medusa.Gauge?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="600.0" prefWidth="1001.0" style="-fx-background-color: #F3F5F7;" stylesheets="@../css/dashBoard.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.doctorDashBoardController">
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#66ddff" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard">
+               <VBox.margin>
+                  <Insets left="20.0" top="25.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <HBox prefHeight="122.0" prefWidth="947.0" spacing="10.0">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="10.0" />
+               </VBox.margin>
+               <children>
+                  <HBox fx:id="pane1" prefHeight="100.0" prefWidth="333.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="166.5" HBox.hgrow="ALWAYS">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="82.0" prefWidth="151.0">
+                                 <children>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="USERS" size="45" />
+                                 </children>
+                              </HBox>
+                              <Text fx:id="allClients" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                           </children></VBox>
+                        <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="166.5">
+                           <children>
+                              <Gauge fx:id="allClientsGauge" animated="true" decimals="0" skinType="SLIM" valueVisible="false" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </Gauge>
+                           </children>
+                        </VBox>
+                     </children></HBox>
+                  <HBox fx:id="pane2" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="333.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="166.5" HBox.hgrow="ALWAYS">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="82.0" prefWidth="151.0">
+                                 <children>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="USERS" size="45" />
+                                 </children>
+                              </HBox>
+                              <Text fx:id="newClients" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                           </children></VBox>
+                        <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="166.5">
+                           <children>
+                              <Gauge fx:id="newClientsGauge" animated="true" decimals="0" skinType="SLIM" valueVisible="false" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </Gauge>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="pane3" layoutX="604.0" layoutY="10.0" prefHeight="100.0" prefWidth="333.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="166.5" HBox.hgrow="ALWAYS">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="82.0" prefWidth="151.0">
+                                 <children>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="USERS" size="45" />
+                                 </children>
+                              </HBox>
+                              <Text fx:id="returningClients" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                           </children></VBox>
+                        <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="166.5">
+                           <children>
+                              <Gauge fx:id="allReturningClientsGuage" animated="true" decimals="0" skinType="SLIM" valueVisible="false" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </Gauge>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <VBox fx:id="chartPane" style="-fx-background-radius: 14; -fx-background-color: #FFFFFF; -fx-border-color: #c8c8c8; -fx-border-radius: 14; -fx-border-width: 0.7;" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="25.0" left="20.0" right="20.0" top="10.0" />
+         </BorderPane.margin>
+         <children>
+            <HBox>
+               <children>
+                  <JFXToggleButton fx:id="newClientsToggleButton" onAction="#loadClientsrGraph" selected="true" text="New clients">
+                     <unToggleLineColor>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#ab8f8f" />
+                              <Stop color="#379fff" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </unToggleLineColor>
+                     <toggleColor>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#379fff" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </toggleColor>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </JFXToggleButton>
+                  <JFXToggleButton fx:id="returningClientsToggleButton" layoutX="10.0" layoutY="10.0" onAction="#loadCnewClientsGraph" selected="true" text="Returning Clients">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <unToggleLineColor>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="#fd5b73" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </unToggleLineColor>
+                     <toggleColor>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#fd5b73" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </toggleColor>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </JFXToggleButton>
+                  <Text fill="#fd5b73" strokeType="OUTSIDE" strokeWidth="0.0" text="DETAILED VIEW" HBox.hgrow="NEVER">
+                     <HBox.margin>
+                        <Insets left="562.0" top="20.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </VBox>
+   </center>
+</BorderPane>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="600.0" prefWidth="1001.0" style="-fx-background-color: #F3F5F7;" stylesheets="@../css/dashBoard.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.viewPatientController">
+   <top>
+      <HBox prefWidth="967.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="45.0" prefWidth="710.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Text fill="#66ddff" strokeType="OUTSIDE" strokeWidth="0.0" text="View">
+                     <VBox.margin>
+                        <Insets left="20.0" top="25.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane layoutX="257.0" layoutY="34.0" prefHeight="521.0" prefWidth="967.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-color: #c8c8c8; -fx-border-radius: 15; -fx-border-width: 0.7;" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="34.0">
+               <children>
+                  <TableView fx:id="patientTable" layoutY="62.0" prefHeight="439.0" prefWidth="927.0" stylesheets="@../css/table.css" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="62.0">
+                    <columns>
+                        <TableColumn fx:id="id" maxWidth="2500.0" prefWidth="75.0" text="ID" />
+                      <TableColumn fx:id="firstName" prefWidth="75.0" text="First Name" />
+                        <TableColumn fx:id="lastName" prefWidth="75.0" text="Last Name" />
+                        <TableColumn fx:id="email" prefWidth="75.0" text="Email Address" />
+                        <TableColumn fx:id="phone" prefWidth="75.0" text="Phone" />
+                        <TableColumn fx:id="city" prefWidth="75.0" text="City" />
+                        <TableColumn fx:id="district" prefWidth="75.0" text="Home District" />
+                        <TableColumn fx:id="action" prefWidth="75.0" text="Action" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <AnchorPane fx:id="pane1" layoutX="20.0" layoutY="-14.0" prefHeight="56.0" prefWidth="927.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+               </children>
+            </AnchorPane>
+            <JFXTextField fx:id="searchPatientTxtField" labelFloat="true" layoutX="715.0" layoutY="-13.0" onKeyTyped="#searchPatient" prefHeight="25.0" prefWidth="232.0" promptText="Search " AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="-15.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

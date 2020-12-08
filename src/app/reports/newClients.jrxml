@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="newClients" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a665ac07-6c33-46c2-9148-d4ee9a66c5a8">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="222"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT * FROM VirtualSigns GROUP BY  ClientId HAVING COUNT(*) <= 2]]>
+	</queryString>
+	<field name="ID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ClientId" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ClientName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ClientEmail" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="weightLoss" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Height" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Rash" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Throat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Gland" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Headache" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Stomach" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Pain" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Aches" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Diarrhoea" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TreatmentDate" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ReturningDate" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Result" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Prescription" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Notify" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="59" splitType="Stretch">
+			<staticText>
+				<reportElement x="342" y="26" width="130" height="31" uuid="537961ee-721b-4e45-a465-62742ca07edc"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Report Summary]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement x="356" y="0" width="100" height="20" uuid="96350f10-af3f-4093-bc51-d1c9cf242c93"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[All New Clients]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="145" height="20" uuid="c71f36ee-d5ea-4d71-82e4-f5c076550262"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Client Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="145" y="0" width="83" height="20" uuid="f44c5a16-f9e8-46dd-83c6-91bf25831106"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[weightLoss]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="228" y="0" width="57" height="20" uuid="074010c3-e29f-4538-9906-9346fdea1c5d"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Height]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="285" y="0" width="57" height="20" uuid="7f6d6eda-18b5-42ff-b4cc-4ac3601feb26"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Rash]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="342" y="0" width="57" height="20" uuid="f8cab992-ff74-47ec-b54a-937d9560c92b"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Throat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="399" y="0" width="57" height="20" uuid="01aa3c5a-c364-4ccf-92d3-adb4d8c26f11"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Gland]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="456" y="0" width="57" height="20" uuid="861f8f39-2b87-427f-8a47-a8073db4a73b"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Headache]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="513" y="0" width="57" height="20" uuid="3565c0f3-718c-4d60-811a-723dc1bba809"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Stomach]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="570" y="0" width="57" height="20" uuid="ea850102-dbe0-4c7f-9f98-9cbdda657536"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pain]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="627" y="0" width="57" height="20" uuid="14d0af10-08bc-44ed-b469-d3b151b8e5c4"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Aches]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="684" y="1" width="57" height="20" uuid="6b032cdc-6df9-417d-be77-ce0c2c0fcc2e"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Diarrhoea]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="741" y="0" width="57" height="20" uuid="c7ce7814-01d3-496b-8293-387e70fc00f4"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Result]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="145" height="20" uuid="64e5a82e-a8db-4ce4-ae21-76ae41ae0455"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ClientName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="145" y="0" width="83" height="20" uuid="a41734d1-8dfe-4dba-8ac7-602d667765c1"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{weightLoss}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="228" y="0" width="57" height="20" uuid="323472ec-312c-4e78-baed-113dd54cc264"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Height}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="285" y="0" width="57" height="20" uuid="2f6b21f8-317b-4bf1-9749-b9299dd7a4e5"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Rash}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="342" y="0" width="57" height="20" uuid="a2c4847f-cc85-492d-a4db-17b6fdc15c55"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Throat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="399" y="0" width="57" height="20" uuid="9f432173-3300-4ab4-b653-01a5611c0ee5"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Gland}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="456" y="0" width="57" height="20" uuid="3f71beb1-e7c3-442e-ba98-6760401e19c4"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Headache}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="513" y="0" width="57" height="20" uuid="e445a50b-a7ac-45de-8c71-eef7ff94bdd2"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Stomach}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="570" y="0" width="57" height="20" uuid="b8e41f67-da74-47d0-8370-0a8c8a6017e6"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Pain}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="627" y="0" width="57" height="20" uuid="228f8c65-b020-46b2-a3bd-118c3c4f11b8"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Aches}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="684" y="1" width="57" height="20" uuid="5258f730-992e-470f-834e-6fc91f42f67f"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Diarrhoea}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="741" y="0" width="57" height="20" uuid="85fdec54-a17a-470f-a865-02d01a6c90ca"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Result}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="2" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="36" splitType="Stretch">
+			<textField>
+				<reportElement x="698" y="12" width="100" height="20" uuid="58c814c4-3d27-4780-add3-9c32e954290d"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="2" splitType="Stretch"/>
+	</summary>
+</jasperReport>
