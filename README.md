@@ -1,5 +1,5 @@
 # JavaFX-Antiviral-Treatment-Client-Management-Info-System
-Antiviral Treatment Client Management Info System is a system used in the hospital that ensures the integrity of record keeping, patient tracking,  and  drug  dispensary  by  operating  in  a  most  technological  manner. Due  to  the  respect  on  the  epidemic  of  HIV/AIDS  and  its  consistent  awkward increase  of  people  contracting  the  virus  every  year,  this  has  led  to  the  growth  outcry regarding ART patients who demand extra monitoring during their forever taking of drags. Some patients have inconsistencies in taking ARVs, some have built resistance for the treatment, and some needs other lines of defense considering the defaults which come due to incompatibilities with the medicine
+Antiviral Treatment Client Management Info System is a system used in the hospital that ensures the integrity of record keeping, patient tracking,  and  drug  dispensary  by  operating  in  a  most  technological  manner. Due  to  the  respect  on  the  epidemic  of  HIV/AIDS  and  its  consistent  awkward increase  of  people  contracting  the  virus  every  year,  this  has  led  to  the  growth  outcry regarding ART patients who demand extra monitoring during their forever taking of drugs. Some patients have inconsistencies in taking ARVs, some have built resistance for the treatment, and some needs other lines of defense considering the defaults which come due to incompatibilities with the medicine
 
 ## Libraries Used
 
@@ -24,3 +24,6 @@ Antiviral Treatment Client Management Info System is a system used in the hospit
 ![Screenshot (117)](https://user-images.githubusercontent.com/75673222/101602720-3303c800-3a07-11eb-8cca-ba839bcecd2f.png)
 ![Screenshot (118)](https://user-images.githubusercontent.com/75673222/101602724-339c5e80-3a07-11eb-9b3c-37fc87c36d5e.png)
 ![Screenshot (119)](https://user-images.githubusercontent.com/75673222/101602726-3434f500-3a07-11eb-94de-47c71b18a6f4.png)
+![Screenshot (148)](https://user-images.githubusercontent.com/75673222/102590180-d8f6b700-4118-11eb-8048-e9f00d6fbab0.png)
+![Screenshot (149)](https://user-images.githubusercontent.com/75673222/102590187-dac07a80-4118-11eb-81b2-47e9e937ccfc.png)
+![Screenshot (150)](https://user-images.githubusercontent.com/75673222/102590189-dbf1a780-4118-11eb-8169-9278af95821b.png)
