@@ -114,7 +114,7 @@ public class loginController implements Initializable {
                 + ") ENGINE = InnoDB;");
         try {
             VBox box = (VBox) FXMLLoader.load(getClass().getResource("/app/view/loginForm.fxml"));
-            rootPane.setLeft(box);
+            rootPane.setRight(box);
         } catch (IOException ex) {
             Logger.getLogger(loginController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -216,12 +216,6 @@ public class loginController implements Initializable {
         fadeTransition.setToValue(1);
         fadeTransition.play();
         imageView.setImage(new Image("/app/images/" + image + ""));
-    }
-
-    @FXML
-    private void closeApp(MouseEvent event) {
-        Platform.exit();
-        System.exit(0);
     }
 
     private void sendReminders() {

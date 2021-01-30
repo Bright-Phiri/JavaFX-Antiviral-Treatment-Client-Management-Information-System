@@ -14,16 +14,25 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="386.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.loginFormController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="386.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.loginFormController">
    <children>
-      <HBox alignment="CENTER_LEFT" prefHeight="83.0" prefWidth="386.0">
+      <HBox alignment="TOP_RIGHT" prefHeight="33.0" prefWidth="386.0">
+         <children>
+            <FontAwesomeIconView glyphName="CLOSE" onMouseClicked="#closeApp" size="20">
+               <HBox.margin>
+                  <Insets right="10.0" top="10.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER">
          <children>
             <ImageView fitHeight="44.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/aids_ribbon_96px.png" />
                </image>
                <HBox.margin>
-                  <Insets left="40.0" />
+                  <Insets />
                </HBox.margin>
             </ImageView>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ART">

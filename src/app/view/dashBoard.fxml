@@ -113,7 +113,7 @@
       </VBox>
    </top>
    <center>
-      <VBox fx:id="chartPane" style="-fx-background-radius: 14; -fx-background-color: #FFFFFF; -fx-border-color: #c8c8c8; -fx-border-radius: 14; -fx-border-width: 0.7;" BorderPane.alignment="CENTER">
+      <VBox fx:id="chartPane" style="-fx-background-radius: 14; -fx-background-color: #FFFFFF; -fx-border-color: #c8c8c8; -fx-border-radius: 14; -fx-border-width: 0.7;" stylesheets="@../css/chart.css" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets bottom="25.0" left="20.0" right="20.0" top="10.0" />
          </BorderPane.margin>

@@ -15,6 +15,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -84,7 +85,7 @@ public class loginFormController implements Initializable {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/app/view/createAccount.fxml"));
             Parent parent = loader.load();
             createAccountController controller = (createAccountController) loader.getController();
-            loginController.root.setLeft(parent);
+            loginController.root.setRight(parent);
         } catch (IOException ex) {
             Logger.getLogger(loginFormController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -103,6 +104,12 @@ public class loginFormController implements Initializable {
         if (event.getCode() == KeyCode.ENTER){
             login(new ActionEvent());
         }
+    }
+    
+    @FXML
+    private void closeApp(MouseEvent event) {
+        Platform.exit();
+        System.exit(0);
     }
 
 }
