@@ -17,7 +17,7 @@ Antiviral Treatment Client Management Info System is a system used in the hospit
 ## Screenshots
 
 ![Screenshot (339)](https://user-images.githubusercontent.com/75673222/106364209-064c9c80-6336-11eb-962a-a7a01bc10ce1.png)
-![Screenshot (340)](https://user-images.githubusercontent.com/75673222/106364217-15cbe580-6336-11eb-92dd-c4299b1d403a.png)
+![Screenshot (342)](https://user-images.githubusercontent.com/75673222/106364324-d81b8c80-6336-11eb-90a4-f2c66f231512.png)
 ![Screenshot (113)](https://user-images.githubusercontent.com/75673222/101602705-3008d780-3a07-11eb-9902-27d3ed98dff3.png)
 ![Screenshot (114)](https://user-images.githubusercontent.com/75673222/101602712-313a0480-3a07-11eb-9285-005ad3ab1734.png)
 ![Screenshot (115)](https://user-images.githubusercontent.com/75673222/101602715-31d29b00-3a07-11eb-9351-50f76b1e2260.png)
