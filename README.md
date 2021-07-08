@@ -1,5 +1,5 @@
 # JavaFX-Antiviral-Treatment-Client-Management-Info-System
-Antiviral Treatment Client Management Info System is a system that is used in the hospital to ensure the integrity of record keeping, patient tracking,  and  drug  dispensary  by  operating  in  a  most  technological  manner. Due  to  the  respect  on  the  epidemic  of  HIV/AIDS  and  its  consistent  awkward increase  of  people  contracting  the  virus  every  year,  this  has  led  to  the  growth  outcry regarding ART patients who demand extra monitoring during their forever taking of drugs. Some patients have inconsistencies in taking ARVs, some have built resistance for the treatment, and some needs other lines of defense considering the defaults which come due to incompatibilities with the medicine
+A system designed for hospitals to ensure the integrity of record keeping, patient tracking,  and  drug  dispensary. 
 
 ## Libraries Used
 
